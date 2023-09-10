@@ -1,8 +1,10 @@
 OUTP = $$OUT_PWD/../bin/Toou2D
+#OUTP     = $$IDE_QUICK_PLUGIN_PATH/Toou2D
 BUILDBIN_PATH = $$replace(OUTP, src-toou2d/../bin, bin)
 QTQMLT2D_PATH = $$[QT_INSTALL_QML]/Toou2D
 PRESET_PATH = $$PWD/build-preset
 SOLIBFILE_PATH = $$OUT_PWD/libToou2D.so
+#SOLIBFILE_PATH = $$OUTP/libToou2D.so
 ANDROID = NO
 
 android{

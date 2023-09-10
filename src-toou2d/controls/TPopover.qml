@@ -78,8 +78,12 @@ TPopup{
 
     Connections{
         target: _root_window_;
-        onWidthChanged:close();
-        onHeightChanged:close();
+
+        //! Qt 5.15.0 new function
+        function onWidthChanged() {close()}
+        function onHeightChanged() {close()}
+        //onWidthChanged:close();
+        //onHeightChanged:close();
     }
 
     TGadgetBackground{

@@ -2,6 +2,8 @@
 
 #include <QFontDatabase>
 #include <QQmlContext>
+#include <QVersionNumber>
+
 #include "world.h"
 #include "theme/ThemeManager.h"
 #include "theme/theme_binder.h"
@@ -184,4 +186,14 @@ QStringList T2D::awesomelist()
         list.append(enumType.key(i)); //enumType.value(i)
     }
     return list;
+}
+
+QString T2D::qtVersion() const
+{
+    return QT_VERSION_STR;
+}
+
+bool T2D::checkQtVersion(int major, int minor, int patch)
+{
+    return QT_VERSION >= QT_VERSION_CHECK(major, minor, patch);
 }

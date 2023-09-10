@@ -1,3 +1,5 @@
+include($$PWD/../Toou-2D.pri)
+
 QT          += qml quick svg
 CONFIG      += plugin c++11
 TEMPLATE    = lib
@@ -72,10 +74,10 @@ contains(QMAKE_HOST.os,Windows) {
     include(./build_macos.pri)
 }
 
-message("-----------------------------")
-message("Toou 技术交流QQ群:244808")
-message("http://www.toou.net")
-message("1. 构建")
-message("2. 运行")
-message("先构建再运行，人生路必定赢")
-message("-----------------------------")
+#message("-----------------------------")
+#message("Toou 技术交流QQ群:244808")
+#message("http://www.toou.net")
+#message("1. 构建")
+#message("2. 运行")
+#message("先构建再运行，人生路必定赢")
+#message("-----------------------------")

@@ -135,7 +135,10 @@ Item {
 
     Connections{
         target: toou2d_scrollbarv.target;
-        onContentYChanged:{
+
+        //! Qt 5.15.0 new function
+        // onContentYChanged:
+        function onContentYChanged (){
             if(!mouseArea.ishold){
                 var t = toou2d_scrollbarv.target;
                 var p = t.contentY / (t.contentHeight - t.height);
@@ -145,7 +148,8 @@ Item {
             mprivate.restoreVisibleState();
         }
 
-        onContentHeightChanged:{
+        // onContentHeightChanged:{
+        function onContentHeightChanged (){
             var t  = toou2d_scrollbarv.target;
             var nh = t.height / t.contentHeight * toou2d_scrollbarv.height;
             if(nh > thumbMinHieght){
@@ -154,7 +158,8 @@ Item {
             mprivate.checkVisible();
         }
 
-        onHeightChanged:mprivate.checkVisible();
+        // onHeightChanged:
+        function onHeightChanged() { mprivate.checkVisible();}
     }
 
     TObject{

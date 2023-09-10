@@ -19,6 +19,8 @@ public:
     Q_INVOKABLE QString     awesomeFromKey(const QString& key);
     Q_INVOKABLE QString     awesomeFromValue(int type);
     Q_INVOKABLE QStringList awesomelist();
+    Q_INVOKABLE QString     qtVersion() const;
+    Q_INVOKABLE bool        checkQtVersion(int major, int minor, int patch);
 
     void registerTypes(const char *uri);
     void initializeEngine(QQmlEngine *engine, const char *uri);
